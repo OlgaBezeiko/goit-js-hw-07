@@ -34,11 +34,7 @@ function handleImageClick(event) {
     const originalImageURL = event.target.dataset.source;
     const description = event.target.getAttribute('alt');
     
-    instance = basicLightbox.create(`
-      <div class="modal">
-        <img class="modal__image" src="${originalImageURL}" alt="${description}" />
-      </div>
-    `);
+    instance = basicLightbox.create(`<img src="${originalImageURL}" alt="${description}" />`);
     
     instance.show();
     document.addEventListener('keydown', handleKeyDown);
